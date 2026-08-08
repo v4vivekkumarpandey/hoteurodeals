@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dziękujemy za zamówienie!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            max-width: 520px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: center;
+        }
+        .top-bar {
+            background: linear-gradient(360deg, #06D6A0 6%, #118AB2 99%);
+            padding: 12px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .hero {
+            padding: 48px 40px 32px;
+        }
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #078400, #0a9e00);
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(7,132,0,0.25);
+        }
+        .icon-circle svg {
+            width: 44px;
+            height: 44px;
+            fill: #fff;
+        }
+        .hero h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .hero .subtitle {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 0;
+        }
+        .greeting {
+            font-size: 18px;
+            color: #078400;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .steps-section {
+            padding: 0 40px 40px;
+        }
+        .steps-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .step-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 20px;
+        }
+        .step-icon.green { background: #e6f9e6; }
+        .step-icon.blue { background: #e8f4fd; }
+        .step-icon.orange { background: #fff3e0; }
+        .step-content h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+        .step-content p {
+            font-size: 13px;
+            color: #777;
+            line-height: 1.5;
+        }
+        .order-details {
+            margin: 0 40px 32px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+        }
+        .order-details h3 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .detail-row:last-child { border-bottom: none; }
+        .detail-label { color: #888; }
+        .detail-value { color: #333; font-weight: 500; }
+        .bottom-bar {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            border-top: 1px solid #eee;
+        }
+        .bottom-bar p {
+            font-size: 12px;
+            color: #aaa;
+            line-height: 1.6;
+        }
+        @media (max-width: 480px) {
+            .hero { padding: 36px 24px 24px; }
+            .hero h1 { font-size: 22px; }
+            .steps-section { padding: 0 24px 32px; }
+            .order-details { margin: 0 24px 24px; }
+            .bottom-bar { padding: 16px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">ZAMÓWIENIE PRZYJĘTE ✓</div>
+
+        <div class="hero">
+            <div class="icon-circle">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            </div>
+            <p class="greeting" id="greeting">Dziękujemy!</p>
+            <h1>Twoje zamówienie jest u nas</h1>
+            <p class="subtitle">Operateur skontaktuje się z Tobą w ciągu 24 godzin</p>
+        </div>
+
+        <div class="steps-section">
+            <div class="steps-title">Co teraz?</div>
+            <div class="step">
+                <div class="step-icon green">📞</div>
+                <div class="step-content">
+                    <h3>Potwierdzenie telefoniczne</h3>
+                    <p>Zadzwonimy do Ciebie, aby potwierdzić adres dostawy i szczegóły zamówienia.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon blue">📦</div>
+                <div class="step-content">
+                    <h3>Ekspresowa dostawa</h3>
+                    <p>Paczka zostanie wysłana natychmiast po potwierdzeniu. Dostawa w ciągu 24-48 godzin.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon orange">💰</div>
+                <div class="step-content">
+                    <h3>Płatność przy odbiorze</h3>
+                    <p>Zapłacisz kurierowi gotówką dopiero po otrzymaniu paczki. Zero ryzyka!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-details" id="orderDetails">
+            <h3>Szczegóły zamówienia</h3>
+            <div class="detail-row">
+                <span class="detail-label">Produkt</span>
+                <span class="detail-value">Wydajna dmuchawa</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Cena</span>
+                <span class="detail-value" style="color:#078400;font-weight:700;">255 zł (za pobraniem)</span>
+            </div>
+            <div class="detail-row" id="row-name" style="display:none;">
+                <span class="detail-label">Imię</span>
+                <span class="detail-value" id="val-name"></span>
+            </div>
+            <div class="detail-row" id="row-tel" style="display:none;">
+                <span class="detail-label">Telefon</span>
+                <span class="detail-value" id="val-tel"></span>
+            </div>
+            <div class="detail-row" id="row-address" style="display:none;">
+                <span class="detail-label">Adres</span>
+                <span class="detail-value" id="val-address"></span>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <p>Nummer potwierdzenia zostanie wysłany SMS-em.<br>W razie pytań zadzwoń pod numer podany w SMS-ie.</p>
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const tel = params.get('tel');
+        const address = params.get('address');
+
+        if (name) {
+            const decoded = decodeURIComponent(name);
+            document.getElementById('greeting').textContent = 'Dziękujemy, ' + decoded + '!';
+            document.getElementById('row-name').style.display = 'flex';
+            document.getElementById('val-name').textContent = decoded;
+        }
+        if (tel) {
+            document.getElementById('row-tel').style.display = 'flex';
+            document.getElementById('val-tel').textContent = decodeURIComponent(tel);
+        }
+        if (address) {
+            document.getElementById('row-address').style.display = 'flex';
+            document.getElementById('val-address').textContent = decodeURIComponent(address);
+        }
+    </script>
+</body>
+</html>
