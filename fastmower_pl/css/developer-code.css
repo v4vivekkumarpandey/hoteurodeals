@@ -1,0 +1,158 @@
+.mbr-text.mbr-fonts-style.counter-container.display-7>ul li {
+    list-style: square url("../images/topo.png");
+ }
+
+.text-gray {
+  color: #c8c8c8 ;
+}
+
+.text-grey {
+    color: #7e7e7e;
+}
+.text-red {
+    color: #ff0000;
+}
+
+@media (min-width: 768px){
+
+.embla__container .embla__slide:first-child{
+    animation: slider 20s infinite;
+}
+
+@keyframes slider{
+    0{
+        margin-left:0rem;
+    }
+    33%{
+        margin-left:0rem;
+    }
+    34%{
+        margin-left:-360px;
+    }
+
+    65%{
+        margin-left:-360px;
+    }
+    66%{
+        margin-left:-720px;
+    }
+
+    100%{
+        margin-left:-720px;
+    }
+}
+}
+@media (max-width: 767.99px){
+
+    .embla__viewport{
+        overflow:hidden;
+    }
+
+    .embla__container{
+        display:flex;
+        animation: slider 25s infinite;
+        will-change: transform;
+    }
+
+    @keyframes slider{
+        0%,16%{
+            transform: translateX(0);
+        }
+
+        20%,36%{
+            transform: translateX(-70vw);
+        }
+
+        40%,56%{
+            transform: translateX(-140vw);
+        }
+
+        60%,76%{
+            transform: translateX(-210vw);
+        }
+
+        80%,96%{
+            transform: translateX(-280vw);
+        }
+
+        100%{
+            transform: translateX(0);
+        }
+    }
+}
+
+/* Form */
+.tm-order-form{
+    width:100%;
+    max-width:400px;
+    margin:20px auto;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+}
+
+
+
+.tm-order-form label{
+    display:block;
+    width:100%;
+    text-align:left;
+    margin-bottom:5px;
+    font-size:17px;
+}
+
+/* Inputs */
+.tm-order-form input[type="text"],
+.tm-order-form input[type="tel"]{
+    width:100%;
+    padding:10px 10px;
+    border:1px solid #999;
+    border-radius:7px;
+    background:#fff;
+    font-size:16px;
+    color:#222;
+    box-sizing:border-box;
+    outline:none;
+    margin-bottom: 10px;
+}
+
+
+/* Button */
+.tm-order-form button{
+    margin-top:18px;
+    background:#95f33a;
+    color:#222;
+    border:none;
+    border-radius:40px;
+    padding:12px 50px;
+    font-size:28px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+    margin-top: 0;
+}
+
+.tm-order-form button:hover{
+    background:#7fe41d;
+    transform:translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width:600px){
+
+    .tm-order-form{
+        max-width:100%;
+    }
+
+    .tm-order-form input[type="text"],
+    .tm-order-form input[type="tel"]{
+        width:100%;
+        margin-bottom:15px;
+        border:1px solid #95f33a;
+    }
+
+    .tm-order-form button{
+        width:100%;
+        font-size:24px;
+        padding:10px;
+    }
+}
