@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="pl">
+<head>
+
+   <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18339059189"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-18339059189');
+        </script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>High Pressure Cleaner — Pistolet na wodę pod wysokim ciśnieniem</title>
+<meta name="description" content="High Pressure Cleaner — bezprzewodowy pistolet na wodę pod wysokim ciśnieniem 40 Bar. Umyj samochód, taras czy okna w kilka minut, bez podłączania do kranu. Płatność za pobraniem." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cool:#0288d1;
+    --cool-dark:#0277bd;
+    --warm:#00acc1;
+    --warm-dark:#00838f;
+    --ink:#16202c;
+    --muted:#5a6b7b;
+    --line:#e5eaf0;
+    --bg-soft:#f2f9fc;
+    --green:#2e9e4f;
+    --radius:16px;
+    --shadow:0 18px 50px rgba(2,119,189,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.h{font-family:"Poppins",Inter,sans-serif;line-height:1.15;letter-spacing:-.5px}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .center{text-align:center}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    background:linear-gradient(90deg,var(--cool),var(--warm));
+    color:#fff;text-align:center;font-size:14px;font-weight:600;
+    padding:9px 16px;letter-spacing:.2px;
+  }
+  .topbar b{font-weight:800}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      radial-gradient(1200px 500px at 80% -10%, rgba(0,172,193,.12), transparent 60%),
+      radial-gradient(900px 500px at 10% 0%, rgba(2,136,209,.12), transparent 60%),
+      var(--bg-soft);
+    padding:52px 0 40px;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+    color:var(--cool-dark);font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;
+    box-shadow:0 4px 14px rgba(2,119,189,.08);text-transform:uppercase;letter-spacing:.5px;
+  }
+  .hero h1{font-size:44px;font-weight:800;margin:18px 0 10px}
+  .hero h1 .grad{
+    background:linear-gradient(90deg,var(--cool),var(--warm));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .hero .sub{font-size:19px;color:var(--muted);margin-bottom:22px;max-width:560px}
+  .hero-usps{list-style:none;display:grid;gap:11px;margin-bottom:26px}
+  .hero-usps li{display:flex;gap:11px;align-items:flex-start;font-weight:600;font-size:16px}
+  .tick{
+    flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:var(--green);
+    display:flex;align-items:center;justify-content:center;margin-top:1px;
+  }
+  .tick svg{width:13px;height:13px;stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .price-tag{display:flex;align-items:baseline;gap:10px}
+  .price-tag .old{color:#9aa7b3;text-decoration:line-through;font-size:18px;font-weight:600}
+  .price-tag .now{font-family:"Poppins";font-size:30px;font-weight:800;color:var(--warm-dark)}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;
+    font-family:"Poppins";font-weight:700;font-size:18px;color:#fff;text-decoration:none;
+    background:linear-gradient(90deg,var(--cool),var(--cool-dark));
+    border:none;border-radius:999px;padding:16px 34px;
+    box-shadow:0 12px 26px rgba(2,119,189,.34);transition:transform .12s ease,box-shadow .12s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(2,119,189,.42)}
+  .btn.blue{background:linear-gradient(90deg,var(--warm),var(--warm-dark));box-shadow:0 12px 26px rgba(0,131,143,.32)}
+  .btn.blue:hover{box-shadow:0 16px 32px rgba(0,131,143,.4)}
+  .pay-note{font-size:13px;color:var(--muted);margin-top:12px;display:flex;align-items:center;gap:7px}
+
+  /* ---------- product visual ---------- */
+  .hero-visual{position:relative}
+  .device{
+    background:linear-gradient(160deg,#ffffff,#e6f4fb);
+    border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);
+    padding:28px;position:relative;overflow:hidden;
+  }
+  .device::before{
+    content:"";position:absolute;inset:-40% -10% auto auto;width:280px;height:280px;
+    background:radial-gradient(circle,rgba(0,172,193,.16),transparent 70%);
+  }
+  .device img{border-radius:16px;margin:0 auto}
+  .device .ph{
+    aspect-ratio:1/1.04;border-radius:16px;background:
+      repeating-linear-gradient(135deg,#eef7fc,#eef7fc 18px,#e2f0f8 18px,#e2f0f8 36px);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--cool-dark);
+  }
+  .device .ph .big{font-family:"Poppins";font-weight:800;font-size:22px}
+  .device .ph small{color:var(--muted);font-weight:500}
+  .float-chip{
+    position:absolute;background:#fff;border:1px solid var(--line);border-radius:14px;
+    box-shadow:0 10px 26px rgba(20,32,44,.12);padding:11px 15px;font-weight:700;font-size:14px;
+    display:flex;align-items:center;gap:9px;
+  }
+  .float-chip.one{top:24px;left:-14px}
+  .float-chip.two{bottom:26px;right:-14px}
+  .float-chip .dot{width:10px;height:10px;border-radius:50%}
+  .dot.blue{background:var(--cool)} .dot.orange{background:var(--warm)}
+
+  /* ---------- section shells ---------- */
+  section{padding:66px 0}
+  .eyebrow{color:var(--cool-dark);font-weight:800;text-transform:uppercase;letter-spacing:1.4px;font-size:13px;margin-bottom:12px}
+  h2.title{font-size:34px;font-weight:800;max-width:760px;margin:0 auto}
+  .center h2.title{margin:0 auto}
+  .lead{color:var(--muted);font-size:18px;max-width:720px;margin:16px auto 0}
+  .soft{background:var(--bg-soft)}
+
+  /* ---------- feature cards ---------- */
+  .feat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:42px}
+  .feat{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 20px;
+    text-align:center;transition:transform .14s ease,box-shadow .14s ease;
+  }
+  .feat:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .feat .ic{
+    width:56px;height:56px;margin:0 auto 16px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  }
+  .feat .ic svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .feat h3{font-size:17px;margin-bottom:6px}
+  .feat p{font-size:14px;color:var(--muted)}
+  .ic.b1{background:linear-gradient(160deg,#29b6f6,#0277bd)}
+  .ic.b2{background:linear-gradient(160deg,#26c6da,#00838f)}
+  .ic.b3{background:linear-gradient(160deg,#42a5f5,#1565c0)}
+  .ic.b4{background:linear-gradient(160deg,#4dd0e1,#00acc1)}
+  .ic.b5{background:linear-gradient(160deg,#66bb6a,#2e7d32)}
+
+  /* ---------- benefits ---------- */
+  .ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}
+  .ben{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .ben .head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .ben .em{
+    width:44px;height:44px;border-radius:12px;background:var(--bg-soft);color:var(--cool-dark);
+    display:flex;align-items:center;justify-content:center;font-size:22px;flex:0 0 44px;
+  }
+  .ben h3{font-size:17px}
+  .ben p{font-size:15px;color:var(--muted)}
+
+  /* ---------- lifestyle gallery ---------- */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:42px}
+  .gal{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+    box-shadow:0 8px 24px rgba(20,32,44,.06);transition:transform .14s ease,box-shadow .14s ease}
+  .gal:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .gal img{width:100%;height:190px;object-fit:cover;display:block}
+  .gal figcaption{padding:14px 16px;font-size:14px;font-weight:600;color:var(--muted)}
+  .gal.ph img{display:none}
+  .gal.ph{min-height:190px;background:
+    repeating-linear-gradient(135deg,#eef7fc,#eef7fc 18px,#e2f0f8 18px,#e2f0f8 36px)}
+
+  /* ---------- specs / savings split ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .savecard{
+    background:linear-gradient(160deg,#0e2233,#0d3a52);color:#fff;border-radius:22px;padding:36px;
+    box-shadow:var(--shadow);
+  }
+  .savecard h3{font-size:24px;margin-bottom:8px}
+  .savecard p{color:#c7d7e4;margin-bottom:24px}
+  .power{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .power .p{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:18px}
+  .power .p .n{font-family:"Poppins";font-weight:800;font-size:30px}
+  .power .p.cool .n{color:#4fc3f7} .power .p.warm .n{color:#4dd0e1}
+  .power .p .l{font-size:13px;color:#c7d7e4;text-transform:uppercase;letter-spacing:.6px}
+  .check-list{list-style:none;display:grid;gap:14px}
+  .check-list li{display:flex;gap:13px;align-items:flex-start;font-size:16px}
+  .check-list b{color:var(--ink)}
+  .check-list .tick{background:var(--green)}
+
+  /* ---------- spec table ---------- */
+  .spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px;margin-top:42px;
+    max-width:840px;margin-left:auto;margin-right:auto;text-align:left}
+  .spec-row{display:flex;justify-content:space-between;gap:16px;padding:14px 4px;border-bottom:1px solid var(--line)}
+  .spec-row .k{color:var(--muted);font-size:15px}
+  .spec-row .v{font-weight:700;font-size:15px;color:var(--ink);text-align:right}
+
+  /* ---------- steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}
+  .step{text-align:center;padding:12px}
+  .step .num{
+    width:52px;height:52px;margin:0 auto 14px;border-radius:50%;
+    background:linear-gradient(90deg,var(--cool),var(--warm));color:#fff;
+    font-family:"Poppins";font-weight:800;font-size:22px;display:flex;align-items:center;justify-content:center;
+  }
+  .step h3{font-size:18px;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:15px}
+
+  /* ---------- order section ---------- */
+  .order{background:var(--bg-soft)}
+  .order-grid{display:grid;grid-template-columns:1fr .9fr;gap:44px;align-items:start}
+  .order-copy h2{font-size:32px;font-weight:800;margin-bottom:14px}
+  .order-copy .lead{margin:0 0 22px}
+  .order-copy .check-list{margin-bottom:26px}
+  .guarantee{
+    display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);
+    border-radius:var(--radius);padding:18px 20px;
+  }
+  .guarantee .em{font-size:30px}
+  .guarantee p{font-size:14px;color:var(--muted)}
+  .guarantee b{color:var(--ink)}
+
+  /* ---------- form ---------- */
+  .form-card{
+    background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);
+    padding:30px 28px;position:relative;
+  }
+  .form-card .fh{text-align:center;margin-bottom:20px}
+  .form-card .fh .price{display:flex;align-items:baseline;justify-content:center;gap:10px;margin-top:6px}
+  .form-card .fh .price .old{color:#9aa7b3;text-decoration:line-through;font-weight:600}
+  .form-card .fh .price .now{font-family:"Poppins";font-size:34px;font-weight:800;color:var(--warm-dark)}
+  .form-card .fh h3{font-size:22px}
+  .tm-order-form label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px;color:var(--ink)}
+  .tm-order-form input[type=text],
+  .tm-order-form input[type=tel]{
+    width:100%;border:1.5px solid var(--line);border-radius:12px;padding:14px 15px;font-size:16px;
+    font-family:inherit;background:#fbfcfe;transition:border-color .12s ease,box-shadow .12s ease;
+  }
+  .tm-order-form input:focus{outline:none;border-color:var(--cool);box-shadow:0 0 0 4px rgba(2,136,209,.12)}
+  .tm-order-form button[type=submit]{
+    width:100%;margin-top:22px;cursor:pointer;font-family:"Poppins";font-weight:800;font-size:19px;color:#fff;
+    background:linear-gradient(90deg,var(--cool),var(--cool-dark));border:none;border-radius:999px;padding:17px 20px;
+    box-shadow:0 12px 26px rgba(2,119,189,.34);transition:transform .12s ease,box-shadow .12s ease;
+  }
+  .tm-order-form button[type=submit]:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(2,119,189,.42)}
+  .form-foot{display:flex;justify-content:center;gap:18px;margin-top:16px;color:var(--muted);font-size:12.5px;flex-wrap:wrap}
+  .form-foot span{display:flex;align-items:center;gap:6px}
+
+  /* ---------- footer ---------- */
+  footer{background:#0e1922;color:#93a4b3;padding:34px 0;font-size:13px;text-align:center}
+  footer b{color:#fff}
+
+  /* ---------- sticky mobile CTA ---------- */
+  .sticky-cta{
+    display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;
+    border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(20,32,44,.1);padding:10px 14px;
+    align-items:center;gap:12px;justify-content:space-between;
+  }
+  .sticky-cta .p{display:flex;flex-direction:column;line-height:1.15}
+  .sticky-cta .p .now{font-family:"Poppins";font-weight:800;font-size:20px;color:var(--warm-dark)}
+  .sticky-cta .p .old{font-size:12px;color:#9aa7b3;text-decoration:line-through}
+  .sticky-cta .btn{padding:13px 26px;font-size:16px}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:32px}
+    .order-grid{grid-template-columns:1fr;gap:32px}
+    .split{grid-template-columns:1fr;gap:28px}
+    .feat-grid{grid-template-columns:repeat(2,1fr)}
+    .ben-grid{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .spec-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:600px){
+    section{padding:48px 0}
+    .hero{padding:34px 0 30px}
+    .hero h1{font-size:32px}
+    .hero .sub{font-size:17px}
+    h2.title,.order-copy h2{font-size:26px}
+    .feat-grid{grid-template-columns:1fr}
+    .power{grid-template-columns:1fr}
+    .sticky-cta{display:flex}
+    body{padding-bottom:74px}
+    .float-chip.one{left:8px} .float-chip.two{right:8px}
+    .gallery{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">💦 Promocja: <b>−30%</b> dzisiaj &nbsp;•&nbsp; 🔋 Bezprzewodowy — bez podłączania do kranu &nbsp;•&nbsp; 🚚 Płatność za pobraniem</div>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="badge">💦 40 Bar · superczyszczenie w minuty</span>
+        <h1>High Pressure Cleaner <span class="grad">40 Bar</span></h1>
+        <p class="sub">Pistolet na wodę pod <b>wysokim ciśnieniem</b> do superiornego czyszczenia w minuty. Umyj samochód, taras czy okna w zaledwie 5 minut — prawie bez wysiłku.</p>
+
+        <ul class="hero-usps">
+          <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span> Maksymalna moc do mycia za jednym razem — 40 Bar, 150 W</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span> Przenośny i bezprzewodowy — używaj bez podłączania do kranu</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span> Regulowana dysza — całkowicie bezpieczny i łatwy w użyciu</li>
+        </ul>
+
+        <div class="hero-cta">
+          <a href="#zamow" class="btn">Zamów teraz &nbsp;→</a>
+          <div class="price-tag">
+            <span class="old">425 zł</span>
+            <span class="now">298 zł</span>
+          </div>
+        </div>
+        <p class="pay-note">🔒 Płatność za pobraniem — płacisz dopiero przy odbiorze</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="device">
+          <img src="images/hero.jpg" alt="High Pressure Cleaner — bezprzewodowy pistolet na wodę pod wysokim ciśnieniem"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="ph" style="display:none">
+            <span class="big">High Pressure Cleaner</span>
+            <small>Pistolet na wodę pod wysokim ciśnieniem</small>
+          </div>
+        </div>
+        <div class="float-chip one"><span class="dot blue"></span> Ciśnienie 40 Bar</div>
+        <div class="float-chip two"><span class="dot orange"></span> Silnik 150 W</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ INTRO ============ -->
+  <section class="center">
+    <div class="wrap">
+      <div class="eyebrow">Moc czyszczenia pod wysokim ciśnieniem</div>
+      <h2 class="title">Miej własną myjkę ciśnieniową w domu i umyj wszystko w kilka minut</h2>
+      <p class="lead">Mycie samochodów, basenów, tarasów, ścian, podłóg i mebli jest skomplikowanym i czasochłonnym zadaniem. Dzięki <b>High Pressure Cleaner</b> usuniesz nawet najtrudniejsze zabrudzenia bez szorowania i bez uszkadzania powierzchni. Przestań wydawać pieniądze na myjnie i usługi profesjonalnego czyszczenia — odnów swoje meble i nadaj domowi nowy wygląd po jednym myciu!</p>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="soft center" id="funkcje">
+    <div class="wrap">
+      <div class="eyebrow">Dlaczego High Pressure Cleaner</div>
+      <h2 class="title">Cała moc profesjonalnej myjki — w kompaktowym, bezprzewodowym pistolecie</h2>
+
+      <div class="feat-grid">
+        <div class="feat">
+          <div class="ic b1"><svg viewBox="0 0 24 24"><path d="M12 21c3.3 0 6-2.7 6-6 0-4-6-11-6-11S6 11 6 15c0 3.3 2.7 6 6 6z"/></svg></div>
+          <h3>Wysokie ciśnienie</h3>
+          <p>40 Bar mocy usuwa uporczywe plamy i najtrudniejszy brud.</p>
+        </div>
+        <div class="feat">
+          <div class="ic b2"><svg viewBox="0 0 24 24"><rect x="6" y="9" width="12" height="11" rx="2"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg></div>
+          <h3>Bezprzewodowy</h3>
+          <p>Pełna swoboda ruchu — bez kabla i bez podłączania do kranu.</p>
+        </div>
+        <div class="feat">
+          <div class="ic b3"><svg viewBox="0 0 24 24"><polyline points="13 3 4 14 12 14 11 21 20 10 12 10 13 3"/></svg></div>
+          <h3>Szybkie czyszczenie</h3>
+          <p>Duże powierzchnie umyte w kilka minut i za jednym razem.</p>
+        </div>
+        <div class="feat">
+          <div class="ic b4"><svg viewBox="0 0 24 24"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/></svg></div>
+          <h3>Zasysanie wody</h3>
+          <p>Z butelki, wiadra, studni czy basenu — dowolne źródło wody.</p>
+        </div>
+        <div class="feat">
+          <div class="ic b5"><svg viewBox="0 0 24 24"><path d="M4 12h9a3 3 0 1 0-3-3M4 16h13a3 3 0 1 1-3 3"/></svg></div>
+          <h3>Regulowana dysza</h3>
+          <p>Od delikatnego strumienia po mocny, skoncentrowany napór.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIFESTYLE GALLERY ============ -->
+  <section class="center" id="galeria">
+    <div class="wrap">
+      <div class="eyebrow">Łatwe czyszczenie każdej powierzchni</div>
+      <h2 class="title">Jeden pistolet, nieograniczone zastosowania</h2>
+      <p class="lead">Podłogi, samochody, okna, baseny, bramy, łodzie, rowery, tarasy, ogród i wiele więcej. Zobacz, jak High Pressure Cleaner radzi sobie z każdym zabrudzeniem na zewnątrz.</p>
+
+      <div class="gallery">
+        <figure class="gal">
+          <img src="images/clean-1.jpg" alt="Mycie samochodu pod wysokim ciśnieniem"
+               loading="lazy" onerror="this.closest('.gal').classList.add('ph')">
+          <figcaption>Mycie samochodów bez wysiłku</figcaption>
+        </figure>
+        <figure class="gal">
+          <img src="images/clean-2.jpg" alt="Czyszczenie tarasu i podłóg"
+               loading="lazy" onerror="this.closest('.gal').classList.add('ph')">
+          <figcaption>Tarasy, podłogi i bramy jak nowe</figcaption>
+        </figure>
+        <figure class="gal">
+          <img src="images/clean-3.jpg" alt="Mycie okien i ścian"
+               loading="lazy" onerror="this.closest('.gal').classList.add('ph')">
+          <figcaption>Okna, ściany i elewacje bez smug</figcaption>
+        </figure>
+        <figure class="gal">
+          <img src="images/clean-4.jpg" alt="Podlewanie ogrodu i roślin"
+               loading="lazy" onerror="this.closest('.gal').classList.add('ph')">
+          <figcaption>Delikatny strumień do ogrodu i roślin</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POWER / SPECS SPLIT ============ -->
+  <section>
+    <div class="wrap split">
+      <div>
+        <div class="eyebrow">Nieograniczona moc</div>
+        <h2 class="title" style="text-align:left">Taka sama moc jak konwencjonalne pistolety — bez kabla</h2>
+        <p class="lead" style="margin-left:0;text-align:left">Większość pistoletów ciśnieniowych ma uchwyty, które utrudniają ich użycie na zewnątrz. High Pressure Cleaner jest całkowicie przenośny, bezprzewodowy i ergonomicznie zaprojektowany — zabierzesz go gdziekolwiek. Mocny silnik <b>150 W i 40 Bar</b> skutecznie usuwa zabrudzenia i uporczywe plamy za jednym razem.</p>
+      </div>
+      <div class="savecard">
+        <h3>Moc, która robi robotę</h3>
+        <p>Profesjonalne rezultaty w domowych warunkach.</p>
+        <div class="power">
+          <div class="p cool"><div class="n">40 Bar</div><div class="l">Ciśnienie</div></div>
+          <div class="p warm"><div class="n">150 W</div><div class="l">Moc silnika</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENEFITS ============ -->
+  <section class="soft center" id="korzysci">
+    <div class="wrap">
+      <div class="eyebrow">Korzyści</div>
+      <h2 class="title">Inteligentny i nowoczesny system czyszczenia</h2>
+
+      <div class="ben-grid">
+        <div class="ben">
+          <div class="head"><div class="em">💥</div><h3>Mocny silnik 150 W</h3></div>
+          <p>150 W i 40 Bar skutecznie usuwają zabrudzenia i uporczywe plamy.</p>
+        </div>
+        <div class="ben">
+          <div class="head"><div class="em">🔋</div><h3>Bezprzewodowy i przenośny</h3></div>
+          <p>Zabierz go gdziekolwiek — bez kabla i bez podłączania do kranu.</p>
+        </div>
+        <div class="ben">
+          <div class="head"><div class="em">💧</div><h3>Zasysanie z każdego źródła</h3></div>
+          <p>Butelki, studnie, baseny, a nawet wiadra — jedyny taki system na rynku.</p>
+        </div>
+        <div class="ben">
+          <div class="head"><div class="em">🧴</div><h3>Zbiornik na detergent</h3></div>
+          <p>Dodaj ulubiony detergent, aby maksymalnie ułatwić sobie pracę.</p>
+        </div>
+        <div class="ben">
+          <div class="head"><div class="em">🎯</div><h3>Regulowana dysza</h3></div>
+          <p>Delikatny strumień do roślin lub mocny, skoncentrowany napór.</p>
+        </div>
+        <div class="ben">
+          <div class="head"><div class="em">🪶</div><h3>Lekki i poręczny</h3></div>
+          <p>Zaledwie 0,95 kg — idealny do przechowywania i noszenia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY / CTA SPLIT ============ -->
+  <section>
+    <div class="wrap split">
+      <div class="savecard" style="background:linear-gradient(160deg,#0d3a52,#0277bd)">
+        <h3>Przestań przepłacać za czyszczenie</h3>
+        <p>Jeden pistolet zastępuje kosztowne usługi.</p>
+        <ul class="check-list">
+          <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span> <span style="color:#eaf3fb">Koniec z myciem samochodu na myjni</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span> <span style="color:#eaf3fb">Bez usług profesjonalnego czyszczenia na zewnątrz</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span> <span style="color:#eaf3fb">Czyszczenie basenu i tarasu we własnym zakresie</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span> <span style="color:#eaf3fb">Bez szorowania i uszkadzania powierzchni</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow">Szybkie i łatwe czyszczenie</div>
+        <h2 class="title" style="text-align:left">Odnów swój dom po jednym myciu</h2>
+        <p class="lead" style="margin-left:0;text-align:left">Dzięki High Pressure Cleaner łatwo usuniesz brud z dużych powierzchni w kilka minut i za jednym razem. Dostosuj ciśnienie do swoich potrzeb, dodaj detergent i ciesz się doskonałymi rezultatami — bez wysiłku i bez wysokich kosztów.</p>
+        <a href="#zamow" class="btn blue" style="margin-top:8px">Chcę ten pistolet &nbsp;→</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECHNICAL DATA ============ -->
+  <section class="soft center" id="dane">
+    <div class="wrap">
+      <div class="eyebrow">Dane techniczne</div>
+      <h2 class="title">Wszystko, co musisz wiedzieć o produkcie</h2>
+
+      <div class="spec-grid">
+        <div class="spec-row"><span class="k">Wielkość produktu</span><span class="v">24 × 7,5 × 36 cm</span></div>
+        <div class="spec-row"><span class="k">Czas ładowania</span><span class="v">3 godziny</span></div>
+        <div class="spec-row"><span class="k">Prędkość silnika</span><span class="v">150 W</span></div>
+        <div class="spec-row"><span class="k">Ciśnienie</span><span class="v">40 Bar</span></div>
+        <div class="spec-row"><span class="k">Przepływ wody</span><span class="v">2,4 L/min</span></div>
+        <div class="spec-row"><span class="k">Funkcja zasysania wody</span><span class="v">Tak</span></div>
+        <div class="spec-row"><span class="k">Podłączenie do kranu</span><span class="v">Tak</span></div>
+        <div class="spec-row"><span class="k">Długość węża ssącego</span><span class="v">5 m</span></div>
+        <div class="spec-row"><span class="k">Regulowana dysza</span><span class="v">Tak</span></div>
+        <div class="spec-row"><span class="k">Waga</span><span class="v">0,95 kg</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STEPS ============ -->
+  <section class="center">
+    <div class="wrap">
+      <div class="eyebrow">Zamawianie jest proste</div>
+      <h2 class="title">Zamów w 3 prostych krokach</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Wypełnij formularz</h3>
+          <p>Podaj imię, telefon i adres dostawy — to zajmie chwilę.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Potwierdzenie telefoniczne</h3>
+          <p>Nasz konsultant oddzwoni, aby potwierdzić zamówienie.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Płać przy odbiorze</h3>
+          <p>Kurier dostarcza paczkę — płacisz dopiero przy odbiorze.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ORDER ============ -->
+  <section class="order" id="zamow">
+    <div class="wrap order-grid">
+      <div class="order-copy">
+        <div class="eyebrow">Zamów teraz</div>
+        <h2>High Pressure Cleaner 40 Bar</h2>
+        <p class="lead" style="margin-left:0;text-align:left">Miej własną myjkę ciśnieniową zawsze pod ręką — umyj samochód, taras czy okna w minuty. Wypełnij formularz obok, a resztą zajmie się nasz zespół.</p>
+        <ul class="check-list">
+          <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span> <b>40 Bar / 150 W</b> — maksymalna moc czyszczenia</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span> <b>Bezprzewodowy</b> — bez podłączania do kranu</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span> <b>Regulowana dysza</b> i zasysanie z każdego źródła wody</li>
+        </ul>
+        <div class="guarantee">
+          <div class="em">🚚</div>
+          <p><b>Płatność za pobraniem.</b> Nie płacisz z góry — rozliczenie następuje dopiero przy odbiorze przesyłki od kuriera.</p>
+        </div>
+      </div>
+
+      <!-- ORDER FORM (ISL) -->
+      <div class="form-card">
+        <div class="fh">
+          <h3>Zamów ze zniżką −30%</h3>
+          <div class="price">
+            <span class="old">425 zł</span>
+            <span class="now">298 zł</span>
+          </div>
+        </div>
+
+        <form class="tm-order-form" action="https://offers.islaffiliate.com/forms/html/" method="post">
+          <label for="name">Imię i nazwisko*</label>
+          <input id="name" type="text" name="name" autocomplete="name" placeholder="Imię i nazwisko" required><br>
+          <label for="tel">Telefon*</label>
+          <input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="Telefon" required><br>
+          <label for="street-address">Adres*</label>
+          <input id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="Adres" required><br>
+          <input name="uid" type="hidden" value="019fb28c-270f-7f36-9386-36d8b9ba93ee" />
+          <input name="offer" type="hidden" value="1276" />
+          <input name="lp" type="hidden" value="2505" />
+          <input name="thankyoupage" type="hidden" value="https://www.hoteurodeals.online/thanks/index.html"/>
+          <input name="_key" type="hidden" value="7c0960dea72755a95b0a34f777d86be58ac73648" />
+
+          <div style="margin-top: 10px; text-align: center">
+            <button name="submit" type="submit">Kup teraz — 298 zł</button>
+          </div>
+          <script src="https://offers.islaffiliate.com/forms/html/js-v2/" async></script>
+        </form>
+
+        <div class="form-foot">
+          <span>🔒 Bezpieczne zamówienie</span>
+          <span>💳 Płatność przy odbiorze</span>
+          <span>🚚 Szybka wysyłka</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <p><b>High Pressure Cleaner</b> — superiorne czyszczenie pod wysokim ciśnieniem w minuty.</p>
+      <p style="margin-top:8px">© 2026 hoteurodeals.online · Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <!-- sticky mobile CTA -->
+  <div class="sticky-cta">
+    <div class="p">
+      <span class="old">425 zł</span>
+      <span class="now">298 zł</span>
+    </div>
+    <a href="#zamow" class="btn">Zamów teraz</a>
+  </div>
+
+</body>
+</html>

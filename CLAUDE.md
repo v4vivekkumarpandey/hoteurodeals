@@ -43,17 +43,23 @@ Every landing page contains the same core order form; only the hidden IDs differ
 
 The `js-v2` remote script wires up submission. When editing/cloning a page, the `offer`, `lp`, and `_key` hidden inputs are the identity of that offer — do not copy them between pages.
 
+Every page (both landing pages and both thank-you pages) also loads the shared ISL attribution script in its `<head>`: `<script src="https://offers.islaffiliate.com/trk.min.js" async defer></script>`. Keep it on any new page.
+
 Two thank-you strategies exist, and they differ in how order data flows:
 
-- **fastmower_pl**: `thankyoupage` is a static absolute URL to `thanks/index.html`. That page just fires `gtag('event','conversion', { send_to: 'AW-18339059189/...' })` on load.
-- **blower_pl**: JS (`updateThankyouURL()` near the bottom of `index.html`) live-builds `thank-you.html?name=...&tel=...&address=...` from the form inputs on every keystroke. `thank-you.html` then reads those query params to render an order summary. It also does inline phone validation via a POST to `offers.islaffiliate.com/forms/validation/phone.php`.
+- **fastmower_pl**: `thankyoupage` is a static absolute URL to the shared `thanks/index.html`. That page just fires the Google Ads conversion on load.
+- **blower_pl**: JS (`updateThankyouURL()` near the bottom of `index.html`) live-builds a relative `thank-you.html?name=...&tel=...&address=...` from the form inputs on every keystroke. `thank-you.html` then reads those query params (`name`/`tel`/`address`) to render an order summary. The landing page also does inline phone validation via a POST to `offers.islaffiliate.com/forms/validation/phone.php`.
 
-## Analytics / tracking (differs per page — keep them separate)
+## Analytics / tracking
 
-- `fastmower_pl` + shared `thanks/`: Google Ads gtag **AW-18339059189** (conversion label `CIXcCOvqid4cEPWr36hE`).
-- `blower_pl`: Google Tag Manager **GTM-NSB3W8QQ**, GA4 **G-N71T4WQ878**, and an ISL tracking pixel (`offers.islaffiliate.com/pixel/?offer=4093...`).
+The **Google Ads conversion is shared across both funnels**: the same account+label `AW-18339059189/CIXcCOvqid4cEPWr36hE` is fired via `gtag('event','conversion', ...)` on page load by **both** thank-you pages (`thanks/index.html` and `blower_pl/thank-you.html`). Conversions are only ever fired on thank-you pages, never on a landing page.
 
-When cloning a funnel for a new offer, these IDs plus the form's `offer`/`lp`/`_key` are the fields that must be updated for tracking and payout to attribute correctly.
+Per-funnel tags:
+
+- `fastmower_pl` + shared `thanks/`: Google Ads gtag **AW-18339059189** only.
+- `blower_pl` (landing **and** thank-you): Google Ads **AW-18339059189** + GTM **GTM-NSB3W8QQ** (with `<noscript>` iframe) + GA4 **G-N71T4WQ878**, plus an ISL tracking pixel on the landing page (`offers.islaffiliate.com/pixel/?offer=4093...`). All three destinations share one `dataLayer`/`gtag()` and must stay mirrored between the blower landing and thank-you pages.
+
+When cloning a funnel for a new offer, these IDs plus the form's `offer`/`lp`/`_key` are the fields that must be updated for tracking and payout to attribute correctly. Watch for **double-counting**: if a GTM container also fires the AW conversion, it will collide with the hard-coded gtag event on the thank-you page.
 
 ## Editing conventions
 
