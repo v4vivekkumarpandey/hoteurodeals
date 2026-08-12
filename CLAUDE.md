@@ -61,6 +61,16 @@ Per-funnel tags:
 
 When cloning a funnel for a new offer, these IDs plus the form's `offer`/`lp`/`_key` are the fields that must be updated for tracking and payout to attribute correctly. Watch for **double-counting**: if a GTM container also fires the AW conversion, it will collide with the hard-coded gtag event on the thank-you page.
 
+## Google Sheet lead copy (hidden Google Form)
+
+Every landing page has a small inline `<script>` just before `</body>` that POSTs a **parallel copy** of the lead to a hidden Google Form's `/formResponse` endpoint; the Form's linked Sheet is the personal backup record. No server, no Apps Script. It does not change the order flow — the form still POSTs to ISL exactly as before.
+
+Two details keep it reliable: the `submit` listener is registered in the **capture phase** so it runs before ISL's `js-v2` handler, and the request goes via `navigator.sendBeacon` (falling back to `fetch(..., {mode:'no-cors', keepalive:true})`) so it survives the navigation to ISL. A `URLSearchParams` body is sent as `application/x-www-form-urlencoded`, which Google Forms requires and which needs no CORS preflight — hence no hidden `<iframe>` is needed.
+
+Per page you configure `FORM_ACTION` (same everywhere), the `ENTRY` field-ID map (same everywhere), and a per-page `PRODUCT` label. When cloning a funnel, only `PRODUCT` changes. The block self-disables while `FORM_ACTION` still contains the `FORM_ID` placeholder.
+
+Caveats: the Form must be open to anyone and must **not** have "Collect email addresses" or sign-in enabled, or every POST is silently rejected. And this logs every submit **attempt**, including leads ISL later rejects, so the Sheet will read higher than the ISL dashboard — it is not payout data.
+
 ## Editing conventions
 
 - Each funnel is fully self-contained under its own directory with local `css/`, `images/`, `media/`, `js/`. Keep asset paths relative.

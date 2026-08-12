@@ -1279,6 +1279,38 @@ updateThankyouURL();
          </div>
       </footer>
 
+<!-- Kopia leada do Google Sheet przez ukryty Google Form. Dane nadal idą normalnie do ISL. -->
+<script>
+(function () {
+  // Link do formularza: zamień /viewform na /formResponse
+  var FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSeapDX_9AvLYXnuH3uYk8AWowB4rEmBCsCpx0QJvbOHny8qdw/formResponse";
+  // ID pól z "Uzyskaj wypełniony wcześniej link" (Get pre-filled link)
+  var ENTRY = {
+    name:    "entry.1289590058",
+    tel:     "entry.990646571",
+    address: "entry.831433790",
+    product: "entry.146538455"
+  };
+  var PRODUCT = "Powerful Blower";
+
+  var form = document.querySelector('.tm-order-form');
+  if (!form || FORM_ACTION.indexOf('FORM_ID') !== -1) return;
+
+  form.addEventListener('submit', function () {
+    var val = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el ? el.value : ''; };
+    var data = new URLSearchParams();
+    data.append(ENTRY.name, val('name'));
+    data.append(ENTRY.tel, val('tel'));
+    data.append(ENTRY.address, val('street-address'));
+    if (ENTRY.product) data.append(ENTRY.product, PRODUCT);
+
+    // sendBeacon wysyła to jako form-urlencoded i przeżywa przekierowanie do ISL
+    var sent = false;
+    try { sent = navigator.sendBeacon(FORM_ACTION, data); } catch (e) {}
+    if (!sent) { try { fetch(FORM_ACTION, { method: 'POST', mode: 'no-cors', keepalive: true, body: data }); } catch (e) {} }
+  }, true); // capture — odpala się przed handlerem js-v2 od ISL
+})();
+</script>
 
 </body>
 </html>
